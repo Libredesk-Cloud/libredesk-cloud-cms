@@ -1,4 +1,6 @@
 ---
 deployment:
   tasks:
-    - if [ "$(git rev-parse --abbrev-ref HEAD)" = "stable" ]; then export HOME=/home2/sc1utou1720 && npm install && npm run build && mkdir -p tmp && touch tmp/restart.txt; fi
+    - export DEPLOYPATH=/home2/sc1utou1720
+    - cd $DEPLOYPATH && npm install
+    - cd $DEPLOYPATH && npm build
