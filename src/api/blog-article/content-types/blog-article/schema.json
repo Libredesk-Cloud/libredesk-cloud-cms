@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blog_articles",
+  "info": {
+    "singularName": "blog-article",
+    "pluralName": "blog-articles",
+    "displayName": "Blog Article",
+    "description": "Long-form blog articles for the public website"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "excerpt": {
+      "type": "text",
+      "maxLength": 320
+    },
+    "content": {
+      "type": "richtext",
+      "required": true
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "authorName": {
+      "type": "string"
+    },
+    "readingTimeMinutes": {
+      "type": "integer",
+      "min": 1
+    },
+    "tags": {
+      "type": "json"
+    },
+    "seoTitle": {
+      "type": "string",
+      "maxLength": 70
+    },
+    "seoDescription": {
+      "type": "text",
+      "maxLength": 180
+    }
+  }
+}

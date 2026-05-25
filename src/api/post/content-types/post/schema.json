@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts",
+  "info": {
+    "singularName": "post",
+    "pluralName": "posts",
+    "displayName": "Post",
+    "description": "Short news, launch updates, and marketing posts"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "excerpt": {
+      "type": "text",
+      "maxLength": 280
+    },
+    "body": {
+      "type": "richtext",
+      "required": true
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "ctaLabel": {
+      "type": "string"
+    },
+    "ctaUrl": {
+      "type": "string"
+    },
+    "seoTitle": {
+      "type": "string",
+      "maxLength": 70
+    },
+    "seoDescription": {
+      "type": "text",
+      "maxLength": 180
+    }
+  }
+}

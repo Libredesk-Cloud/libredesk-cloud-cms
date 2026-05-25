@@ -1,0 +1,41 @@
+{
+  "kind": "singleType",
+  "collectionName": "site_settings",
+  "info": {
+    "singularName": "site-setting",
+    "pluralName": "site-settings",
+    "displayName": "Site Setting",
+    "description": "Global public website copy and metadata"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "siteName": {
+      "type": "string",
+      "required": true,
+      "default": "Libredesk.cloud"
+    },
+    "defaultSeoTitle": {
+      "type": "string",
+      "maxLength": 70
+    },
+    "defaultSeoDescription": {
+      "type": "text",
+      "maxLength": 180
+    },
+    "waitlistHeadline": {
+      "type": "string"
+    },
+    "waitlistDescription": {
+      "type": "text"
+    },
+    "contactEmail": {
+      "type": "email"
+    },
+    "socialLinks": {
+      "type": "json"
+    }
+  }
+}
