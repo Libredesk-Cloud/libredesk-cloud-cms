@@ -2,5 +2,5 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home2/sc1utou1720
-    - cd $DEPLOYPATH && npm install
-    - cd $DEPLOYPATH && npm build
+    - cd $DEPLOYPATH/repositories/libredesk-cloud-cms && npm install
+    - cd $DEPLOYPATH/repositories/libredesk-cloud-cms && npm run build
