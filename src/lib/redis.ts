@@ -9,8 +9,8 @@ export function getRedis(): Redis {
   return client;
 }
 
-export async function connectRedis(socketPath: string): Promise<void> {
-  client = new Redis({ path: socketPath, lazyConnect: true });
+export async function connectRedis(socketPath: string, password?: string): Promise<void> {
+  client = new Redis({ path: socketPath, password, lazyConnect: true });
   await client.connect();
   strapi.log.info(`[redis] Connected via socket ${socketPath}`);
 }
