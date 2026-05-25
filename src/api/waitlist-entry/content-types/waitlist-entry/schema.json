@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "waitlist_entries",
+  "info": {
+    "singularName": "waitlist-entry",
+    "pluralName": "waitlist-entries",
+    "displayName": "Waitlist Entry",
+    "description": "People waiting for Libredesk.cloud access or launch updates"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "name": {
+      "type": "string"
+    },
+    "company": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": ["pending", "confirmed", "invited", "unsubscribed"],
+      "default": "pending",
+      "required": true
+    },
+    "source": {
+      "type": "enumeration",
+      "enum": ["website", "import", "manual", "app"],
+      "default": "website",
+      "required": true
+    },
+    "locale": {
+      "type": "string"
+    },
+    "consent": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "subscribedAt": {
+      "type": "datetime"
+    },
+    "confirmedAt": {
+      "type": "datetime"
+    },
+    "ipAddress": {
+      "type": "string",
+      "private": true
+    },
+    "userAgent": {
+      "type": "text",
+      "private": true
+    },
+    "notes": {
+      "type": "text"
+    }
+  }
+}
