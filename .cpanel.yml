@@ -1,8 +1,6 @@
 ---
 deployment:
   tasks:
-    - export HOME=/home/sc1utou1720
-    - npm install -g pnpm
-    - cd /home/sc1utou1720/repositories/libredesk-cloud-cms && pnpm install --frozen-lockfile
-    - cd /home/sc1utou1720/repositories/libredesk-cloud-cms && pnpm build
-    - mkdir -p /home/sc1utou1720/repositories/libredesk-cloud-cms/tmp && touch /home/sc1utou1720/repositories/libredesk-cloud-cms/tmp/restart.txt
+    - export DEPLOYPATH=/home2/sc1utou1720
+    - cd $DEPLOYPATH && npm install
+    - cd $DEPLOYPATH && npm build
